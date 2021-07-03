@@ -2,6 +2,18 @@
 {%block content %}
 
 <div class="container">
+
+    {%for image in nairobi %}
     
+        
+
+        <div class="card card-body">
+
+            <img src="{{image_item.image_path.url}}" alt="" height="200px" width="200px">
+            <p>{{image.title}</p>
+          
+        </div>
+        {%endfor %}
+
 </div>
 {% endblock %}
