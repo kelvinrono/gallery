@@ -16,7 +16,6 @@ def location(request):
     karatina  = Location.objects.get(pk=2)
     kericho = Location.objects.get(pk=3)
  
-    
     karatina_images = Gallery.objects.filter(location=karatina)
     kericho_images = Gallery.objects.filter(location=kericho)
     
@@ -27,4 +26,8 @@ def category(request):
     nature = Category.objects.get(pk=2)
     travel = Category.objects.get(pk=3)
     music = Category.objects.get(pk=4)
+
+    nature= Gallery.objects.filter(category=nature)
+    technology = Gallery.objects.filter(category=technology)
+    
     return render(request,'all-photos/category.html', {"tech_images": technology}, {"nature": nature}, {"travel": travel},{"music": music})
