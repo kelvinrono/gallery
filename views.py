@@ -23,8 +23,8 @@ def location(request):
     return render(request, 'all-photos/location.html', {"karatina": karatina_images,"kericho":kericho_images})
 
 def category(request):
-    tech_cetegory=Category.objects.get(pk=1)
-    tech_images=Gallery.objects.filter(category=tech_cetegory)
+    technology=Category.objects.get(pk=1)
     nature = Category.objects.get(pk=2)
     travel = Category.objects.get(pk=3)
-    return render(request,'all-photos/category.html', {"tech_images": tech_images}, {"nature": nature}, {"travel": travel},)
+    music = Category.objects.get(pk=4)
+    return render(request,'all-photos/category.html', {"tech_images": technology}, {"nature": nature}, {"travel": travel},{"music": music})
