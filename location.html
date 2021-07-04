@@ -3,16 +3,23 @@
 
 <div class="container">
 
-    {%for image in nairobi %}
+    {%for image_item in karatina %}
     
-        
-
-        <div class="card card-body">
-
-            <img src="{{image_item.image_path.url}}" alt="" height="200px" width="200px">
-            <p>{{image.title}</p>
-          
+    <div class="card" style="width: 18rem;">
+        <div class="well well-lg p-3" style="text-align: center;border-bottom: 1px solid green;">
+            <img class="card-img-top" src="{{image_item.image_path.url}}" alt="Card image cap" class="img-responsive"
+                height="200px" width="200px" data-toggle="modal" data-target="#myModal{{image_item.id}}">
+            <div class="card-body">
+                <h5 class="card-title">{{image_item.title}}</h5>
+                <p class="card-text">{{image_item.description}}</p>
+                <button class="btn btn-primary" data-toggle="modal"
+                    data-target="#myModal{{image_item.id}}">View</button><br>
+                <p>Posted <span
+                        style="font: size 10px; color:rgb(3, 3, 32);font-weight: bold;">{{image_item.pub_date | timesince}} ago</span>
+                </p>
+            </div>
         </div>
+    </div>
         {%endfor %}
 
 </div>
