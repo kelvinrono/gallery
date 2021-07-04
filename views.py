@@ -25,12 +25,6 @@ def location(request):
 def category(request):
     tech_cetegory=Category.objects.get(pk=1)
     tech_images=Gallery.objects.filter(category=tech_cetegory)
-    return render(request,'category/technology.html', {"tech_images": tech_images})
-def nature(request):
-    nature_category = Category.objects.get(pk=2)
-    nature_images = Gallery.objects.filter(category=nature_category)
-    return render(request,'category/nature.html', {"nature_images": nature_images})
-def meditation(request):
-    meditation_category = Category.objects.get(pk=3)
-    med_images = Gallery.objects.filter(category=meditation_category)
-    return render(request,'category/meditation.html',{"meditation_images": med_images})
+    nature = Category.objects.get(pk=2)
+    travel = Category.objects.get(pk=3)
+    return render(request,'all-photos/category.html', {"tech_images": tech_images}, {"nature": nature}, {"travel": travel},)
