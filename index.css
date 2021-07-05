@@ -1,0 +1,26 @@
+.wrapper{
+    background-color: aqua;
+}
+
+.body{
+    background-color: #D2D4D3;
+    height: 100vh;
+    width:100vw;
+    
+}
+
+.desc{
+    text-align: center;
+    font-size:2rem
+
+}
+.left{
+    height:20vh;
+    width:30vw;
+    background-color:#393b3a
+}
+.view-gallery{
+   display:flex;
+   justify-content:center;
+   align-items: center; 
+}
