@@ -1,0 +1,38 @@
+{%extends 'all-photos/base.html'%}
+
+{% block content %}
+
+<div class="wrapper">
+
+<div class="container-fluid body">
+<div class="desc">
+    <p>They say a picture speaks a thousand word</p>
+    <p>Here, you will view various pictures in different categories, take in different location</p>
+</div>
+<div class="view-gallery">
+<a class="navbar-brand" href="{% url 'gallery' %}"><div class="btn btn-primary"> View gallery</div></a>
+</div>
+{{block.super}}
+
+<div class="left">
+
+</div>
+<div class="right">
+
+</div>
+
+<footer>
+    <div class="twitter">
+        <p>follow me on twitter: @djchepkuta</p>
+    </div>
+
+    <div class="facebook">
+        <p>Facebook: Kelvin Dj Chepkuta</p>
+    </div>
+    <div class="email">
+        Email me: ronohkelvin99@gmail.com
+    </div>
+</footer>
+
+</div>
+{% endblock %}
